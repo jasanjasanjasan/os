@@ -13,11 +13,11 @@ loop:
 loop_big:
  inc al
  mov bl, al
- mov al, al + 32
- cmp al, 90+1
- je exit
+ add al, 32
  int 0x10
  mov al, bl
+ cmp al, 90 + 1
+ je exit
  jmp loop
 
 exit:
