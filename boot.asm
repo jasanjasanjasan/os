@@ -12,7 +12,12 @@ buffer:
  times 10 db 0
  mov bx, buffer
  mov [bx], al
- inc bx 
+ inc bx
+
+cmp bx, 10
+je print
+
+jmp end 
 
 print:
  mov al, [bx]
